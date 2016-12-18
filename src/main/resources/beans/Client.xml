@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+    <!-- Client business object -->
+   <bean id="clientBo" class="com.venolabs.mietwagen.bo.ClientBOImpl" >
+   		<property name="clientDao" ref="clientDao" />
+   </bean>
+ 
+   <!-- Client Data Access Object -->
+   <bean id="clientDao" class="com.venolabs.mietwagen.db.ClientDAOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+ 
+</beans>

@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+    <!-- Car business object -->
+   <bean id="carBo" class="com.venolabs.mietwagen.bo.CarBOImpl" >
+   		<property name="carDao" ref="carDao" />
+   </bean>
+ 
+   <!-- Car Data Access Object -->
+   <bean id="carDao" class="com.venolabs.mietwagen.db.CarDAOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+ 
+</beans>

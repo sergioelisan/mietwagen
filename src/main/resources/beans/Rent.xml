@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+    <!-- Rent business object -->
+   <bean id="rentBo" class="com.venolabs.mietwagen.bo.RentBOImpl" >
+   		<property name="rentDao" ref="rentDao" />
+   </bean>
+ 
+   <!-- Rent Data Access Object -->
+   <bean id="rentDao" class="com.venolabs.mietwagen.db.RentDAOImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+ 
+</beans>
